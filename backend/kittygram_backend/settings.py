@@ -13,10 +13,7 @@ DEBUG = True
 
 allowed_hosts = os.getenv('ALLOWED_HOSTS')
 
-if allowed_hosts:
-    ALLOWED_HOSTS = allowed_hosts.split(',')
-else:
-    ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = allowed_hosts.split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
