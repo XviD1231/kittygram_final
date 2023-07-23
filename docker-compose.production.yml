@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 volumes:
   pg_data:
@@ -6,6 +6,7 @@ volumes:
   media:
 
 services:
+
   db:
     image: postgres:13
     env_file: .env
@@ -17,12 +18,14 @@ services:
     volumes:
       - static:/backend_static
       - media:/app/media
+
   frontend:
     env_file: .env
     image: xvid1231/kittygram_frontend
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
+
   gateway:
     image: xvid1231/kittygram_gateway
     env_file: .env
