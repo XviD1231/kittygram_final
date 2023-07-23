@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '1234')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['kittigramme.sytes.net','localhost','127.0.0.1:9000']
+ALLOWED_HOSTS = ['130.193.42.123', '127.0.0.1', 'localhost', 'kittigramme.sytes.net']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
